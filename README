@@ -1,0 +1,61 @@
+    __  __                __ 
+   / / / /__  ____ ______/ /_
+  / /_/ / _ \/ __ `/ ___/ __/
+ / __  /  __/ /_/ / /  / /_  
+/_/ /_/\___/\__,_/_/   \__/  
+                             
+Heart drawing using heart curve equation
+by Oscar Toledo G. Feb/14/2021
+
+http://nanochess.org
+https://github.com/nanochess
+
+A small demo program drawing a heart using this equation:
+
+    x=16*pow(sin(t),3);
+    y=13*cos(t)-5*cos(2*t)-2*cos(3*t)-cos(4*t);
+
+If you want to assemble it, you must download the Netwide Assembler
+(nasm) from www.nasm.us
+
+Use this command line:
+
+  nasm -f bin heart.asm -Dcom_file=1 -o heart.com
+  nasm -f bin heart.asm -Dcom_file=0 -o heart.img
+
+Tested with VirtualBox for Mac OS X running Windows XP running this
+game, it also works with DosBox and probably with qemu:
+
+  qemu-system-x86_64 -fda heart.img
+
+Enjoy it!
+
+
+>> THE BOOK <<        
+
+My book Programming Boot Sector Games is available from Lulu
+and Amazon, including an 8086/8088 crash course:
+
+  Soft-cover
+    http://www.lulu.com/shop/oscar-toledo-gutierrez/programming-boot-sector-games/paperback/product-24188564.html
+
+  Hard-cover
+    http://www.lulu.com/shop/oscar-toledo-gutierrez/programming-boot-sector-games/hardcover/product-24188530.html
+
+  eBook
+    https://nanochess.org/store.html
+
+These are some of the example programs documented profusely
+in the book:
+
+  * Guess the number.
+  * Tic-Tac-Toe game.
+  * Text graphics.
+  * Mandelbrot set.
+  * F-Bird game.
+  * Invaders game.
+  * Pillman game.
+  * Toledo Atomchess.
+  * bootBASIC language.
+
+Also search for More Boot Sector Games ;)
